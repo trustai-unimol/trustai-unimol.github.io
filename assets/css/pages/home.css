@@ -50,6 +50,7 @@
         .vA-heroClaim{ margin:20px 0 0 4px; color:var(--navy2); font-family:'IBM Plex Mono',monospace; font-size:clamp(12px,1.45vw,19px); letter-spacing:.26em; text-transform:uppercase; white-space:nowrap; }
         .vA-introMeta{ position:absolute; left:50%; bottom:116px; transform:translateX(-50%); z-index:2; display:flex; gap:12px; align-items:center; justify-content:center; color:var(--navy2); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; white-space:nowrap; }
         .vA-introMeta .dot{ width:7px; height:7px; border-radius:50%; background:var(--cyan); box-shadow:0 0 12px rgba(34,182,200,.65); }
+        .vA-introText{ min-width:0; }
         .vA-actions{ display:flex; gap:14px; margin-top:34px; }
         .vA-btn{ position:relative; padding:15px 26px; border-radius:11px; font-weight:700; font-size:15px; text-decoration:none; cursor:pointer; transition:.2s; }
         .vA-btn.p{ background:var(--navy); color:#fff; box-shadow:0 10px 26px rgba(14,42,71,.18); }
@@ -192,10 +193,10 @@
         @media (max-width: 980px){
           .vA-links{ display:none; }
           .vA-rail,.vA-marker{ display:none; }
-          .vA-hero{ padding:92px 18px 78px; }
+          .vA-hero{ padding:92px 18px 82px; }
           .vA-heroBrand{ width:min(760px,96vw); }
           .vA-brandLockup{ flex-direction:column; gap:22px; text-align:center; }
-          .vA-heroClaim{ margin-left:0; white-space:normal; line-height:1.55; }
+          .vA-heroClaim{ margin-left:0; white-space:normal; line-height:1.55; max-width:680px; }
           .vA-introMeta{ bottom:96px; font-size:10px; letter-spacing:.12em; }
           .vA-step{ padding:72px clamp(20px,6vw,44px); }
           .vA-acts{ grid-template-columns:1fr; }
@@ -203,11 +204,11 @@
           .vA-missionTriad::before{ left:50%; right:auto; top:42px; bottom:42px; width:2px; height:auto; background:linear-gradient(180deg,rgba(34,182,200,0),rgba(34,182,200,.52),rgba(34,182,200,0)); transform:scaleY(0); transform-origin:top; }
           .vA-missionTriad.is-in::before{ animation:vA-lineGrowY 1.2s cubic-bezier(.2,.7,.2,1) .18s both; }
           .vA-triadNode{ max-width:420px; margin:0 auto; }
-          .vA-triadNode.n2 .vA-nodeOrb{ transform:none; }
           .vA-pulseTrack{ display:none; }
           .vA-orbitMap{ min-height:auto; display:grid; grid-template-columns:1fr; gap:12px; max-width:560px; }
           .vA-orbitMap::before,.vA-orbitRing,.vA-orbitSignal{ display:none; }
           .vA-orbitCore{ position:relative; left:auto; top:auto; width:100%; height:auto; min-height:250px; transform:none; border-radius:24px; margin-bottom:16px; }
+          .vA-orbitFocus{ padding:48px 34px 38px; }
           .vA-orbitItem{ position:relative; left:auto; top:auto; width:100%; height:auto; min-height:0; border-radius:14px; transform:none; padding:18px 18px 18px 58px; text-align:left; }
           .vA-orbitItem::before{ left:18px; top:18px; right:auto; bottom:auto; width:24px; height:24px; }
           .vA-orbitItem .orbitIndex{ position:absolute; left:18px; top:18px; width:24px; height:24px; }
@@ -217,20 +218,100 @@
           .vA-eduFrame{ position:relative; top:auto; }
           .vA-actors{ grid-template-columns:1fr 1fr; gap:10px; }
           .vA-aconn{ display:none; }
-          .vA-mlead{ font-size:24px; }
           .vA-step h2{ font-size:32px; }
           .vA-mlead{ font-size:20px; }
         }
         @media (max-width: 560px){
           .vA-nav{ padding:14px 18px; }
           .vA-navLogoLink{ width:146px; height:34px; }
-          .vA-hero{ min-height:100svh; padding:84px 14px 76px; }
+          .vA-hero{ min-height:100svh; padding:84px 14px 76px; align-items:center; }
+          .vA-neural{ opacity:.36; }
+          .vA-hero::before{ background-size:34px 34px; }
           .vA-heroBrand{ width:96vw; }
+          .vA-brandLockup{ gap:18px; }
           .vA-cutLogo{ width:118px; }
-          .vA-heroTitle{ font-size:clamp(62px,19vw,88px); }
-          .vA-heroClaim{ font-size:10px; letter-spacing:.16em; }
-          .vA-introMeta{ white-space:normal; text-align:center; width:calc(100% - 40px); bottom:86px; }
-          .vA-step h2{ font-size:28px; }
+          .vA-heroTitle{ font-size:clamp(62px,19vw,88px); line-height:.9; letter-spacing:-.025em; }
+          .vA-heroClaim{ max-width:330px; margin:14px auto 0; font-size:10px; letter-spacing:.14em; line-height:1.55; }
+          .vA-introMeta{ display:block; width:min(300px,calc(100% - 48px)); bottom:78px; white-space:normal; text-align:center; line-height:1.45; letter-spacing:.1em; font-size:9.5px; }
+          .vA-introMeta{ left:0; right:0; transform:none; margin:0 auto; }
+          .vA-introMeta .dot{ display:none; }
+          .vA-introText{ display:block; overflow-wrap:normal; }
+          .vA-cue{ bottom:20px; }
+          .vA-step{ padding:52px 18px; }
+          .vA-head{ margin-bottom:28px; }
+          .vA-kicker{ font-size:11px; letter-spacing:.14em; }
+          .vA-step h2{ font-size:26px; line-height:1.12; letter-spacing:-.45px; }
+          .vA-step .sub{ font-size:15px; line-height:1.55; }
+          .vA-mission{ padding-top:58px; padding-bottom:58px; }
+          .vA-mission::before{ left:18px; right:18px; }
+          .vA-missionLine{ margin-bottom:28px; padding-top:16px; }
+          .vA-mlead{ font-size:17px; line-height:1.5; margin-bottom:0; }
+          .vA-missionTriad{ gap:14px; padding:10px 0 0; }
+          .vA-missionTriad::before{ left:50%; top:26px; bottom:26px; z-index:0; }
+          .vA-triadNode{ position:relative; z-index:2; display:grid; grid-template-columns:64px 1fr; gap:16px; align-items:center; max-width:none; width:100%; min-height:116px; text-align:left; padding:18px 16px; border:1px solid rgba(211,226,238,.92); border-radius:18px; background:#fff; box-shadow:0 14px 36px rgba(14,42,71,.06); }
+          .vA-triadNode{ display:flex; }
+          .vA-triadNode{ flex-direction:column; text-align:center; }
+          .vA-triadNode:hover{ transform:none; background:#fff; box-shadow:0 16px 38px rgba(14,42,71,.08); }
+          .vA-nodeOrb{ width:64px; height:64px; margin:0; box-shadow:0 14px 28px rgba(14,42,71,.14),0 0 0 8px rgba(52,211,224,.08); }
+          .vA-nodeOrb{ margin:0 auto 14px; }
+          .vA-nodeOrb svg{ width:26px; height:26px; }
+          .vA-triadNode h3{ font-size:17px; margin:0 0 5px; }
+          .vA-triadDesc{ font-size:13.5px; line-height:1.45; max-width:none; }
+          .vA-orbitMap{ min-height:570px; display:block; max-width:390px; --r:min(174px,42vw); }
+          .vA-orbitMap::before,.vA-orbitRing,.vA-orbitSignal{ display:block; }
+          .vA-orbitMap::before{ width:366px; height:366px; }
+          .vA-orbitRing.r1{ width:366px; height:366px; }
+          .vA-orbitRing.r2{ width:282px; height:282px; }
+          .vA-orbitRing.r3{ width:184px; height:184px; }
+          .vA-orbitSignal.s1{ --s:366px; }
+          .vA-orbitSignal.s2{ --s:282px; }
+          .vA-orbitSignal.s3{ --s:184px; }
+          .vA-orbitCore{ position:absolute; left:50%; top:48%; width:252px; height:252px; min-height:0; transform:translate(-50%,-50%); border-radius:50%; margin:0; box-shadow:0 26px 60px rgba(14,42,71,.17),0 0 0 14px rgba(52,211,224,.08); }
+          .vA-orbitCore{ overflow:hidden; }
+          .vA-orbitFocus{ padding:42px 30px 36px; }
+          .vA-orbitFocus{ justify-content:center; text-align:center; gap:8px; }
+          .vA-orbitFocus .focusNum{ font-size:10px; margin-bottom:11px; }
+          .vA-orbitFocus .focusTitle{ max-width:176px; font-size:18px; line-height:1.1; }
+          .vA-orbitFocus .focusDesc{ max-width:178px; font-size:12.5px; line-height:1.34; margin-top:0; overflow:visible; }
+          .vA-orbitItem{ position:absolute; left:50%; top:48%; width:42px; height:42px; min-height:42px; border-radius:50%; transform:translate(-50%,-50%) rotate(var(--a)) translate(var(--r)) rotate(calc(var(--a) * -1)); padding:0; display:flex; align-items:center; justify-content:center; text-align:center; box-shadow:0 12px 26px rgba(14,42,71,.08); }
+          .vA-orbitItem::before{ display:none; }
+          .vA-orbitItem .orbitIndex{ position:static; width:auto; height:auto; margin:0; font-size:11px; }
+          .vA-orbitItem .orbitTitle{ display:none; }
+          .vA-orbitItem.on,.vA-orbitItem:hover,.vA-orbitItem:focus{ width:42px; height:42px; min-height:42px; border-radius:50%; transform:translate(-50%,-50%) rotate(var(--a)) translate(var(--r)) rotate(calc(var(--a) * -1)) scale(1.1); }
+          .vA-orbitItem.on .orbitIndex,.vA-orbitItem:hover .orbitIndex,.vA-orbitItem:focus .orbitIndex{ color:var(--blue); }
+          .vA-eduFrame{ padding-left:18px; }
+          .vA-eduFrame .lead{ font-size:19px; line-height:1.42; }
+          .vA-eduStage{ grid-template-columns:42px 1fr; gap:12px; padding:14px 0; }
+          .vA-eduStage .vA-ico{ width:42px; height:42px; box-shadow:0 0 0 6px #fff; }
+          .vA-eduStages::before{ left:20px; }
+          .vA-eduStage .body{ padding:16px 16px 16px 18px; }
           .vA-actors{ grid-template-columns:1fr; }
+          .vA-actor{ padding:16px 10px; }
+          .vA-cgoal{ font-size:15px; line-height:1.58; margin:26px 0 26px; padding-left:14px; }
+          .vA-act{ padding:20px; border-radius:12px; }
           .vA-foot{ padding:42px 22px 30px; }
+          .vA-footBrand{ height:82px; }
+          .vA-footLogo{ width:302px; left:-18px; top:-52px; }
+        }
+        @media (max-width: 390px){
+          .vA-navLogoLink{ width:124px; height:29px; }
+          .vA-hero{ padding-left:16px; padding-right:16px; }
+          .vA-cutLogo{ width:106px; }
+          .vA-heroTitle{ font-size:clamp(56px,18vw,76px); }
+          .vA-heroClaim{ max-width:292px; font-size:9.5px; letter-spacing:.11em; }
+          .vA-introMeta{ width:min(282px,calc(100% - 48px)); font-size:9px; letter-spacing:.08em; }
+          .vA-step{ padding-left:16px; padding-right:16px; }
+          .vA-triadNode{ grid-template-columns:58px 1fr; gap:14px; padding:16px 14px; }
+          .vA-nodeOrb{ width:58px; height:58px; }
+          .vA-orbitMap{ min-height:540px; --r:160px; }
+          .vA-orbitMap::before,.vA-orbitRing.r1{ width:336px; height:336px; }
+          .vA-orbitRing.r2{ width:258px; height:258px; }
+          .vA-orbitRing.r3{ width:166px; height:166px; }
+          .vA-orbitSignal.s1{ --s:336px; }
+          .vA-orbitSignal.s2{ --s:258px; }
+          .vA-orbitSignal.s3{ --s:166px; }
+          .vA-orbitCore{ width:232px; height:232px; }
+          .vA-orbitFocus{ padding:38px 28px 32px; }
+          .vA-orbitFocus .focusTitle{ max-width:160px; font-size:16.5px; }
+          .vA-orbitFocus .focusDesc{ max-width:162px; font-size:11.8px; line-height:1.3; }
         }

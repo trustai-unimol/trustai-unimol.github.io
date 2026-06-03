@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-        <div class="vA-introMeta" data-reveal data-delay="180"><span class="dot"></span>${esc(SITE.brand.heroMeta)}</div>
+        <div class="vA-introMeta" data-reveal data-delay="180"><span class="dot"></span><span class="vA-introText">${esc(SITE.brand.heroMeta)}</span></div>
         <div class="vA-cue">${esc(SITE.ui.scrollCue)}<div class="m"></div></div>
       </header>
     `;
