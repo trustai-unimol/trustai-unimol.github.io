@@ -34,6 +34,9 @@ window.TRUSTAI_SITE = {
     href: "pages/home.html",
   },
   footer: {
+    wordmarkPrefix: "Trust",
+    wordmarkAccent: "AI",
+    claim: "Engineering Trust in Artificial Intelligence",
     navigateTitle: "Navigate",
     contactsTitle: "Contacts",
     copyright: "(c) 2026 TrustAI - Engineering Trust in Artificial Intelligence",

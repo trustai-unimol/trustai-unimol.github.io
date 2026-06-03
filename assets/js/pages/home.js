@@ -198,15 +198,10 @@
       <footer class="vA-foot">
         <div class="top">
           <div class="vA-footBrand">
-            <img class="vA-footLogo" src="${esc(SITE.assets.logoFull)}" alt="${esc(SITE.brand.name)}">
-          </div>
-          <div class="cols">
-            <div>
-              <h4>${esc(SITE.footer.navigateTitle)}</h4>
+            <div class="vA-footWordmark" aria-label="${esc(SITE.brand.name)}">
+              ${esc(SITE.footer.wordmarkPrefix)}<span class="ai">${esc(SITE.footer.wordmarkAccent)}</span>
             </div>
-            <div>
-              <h4>${esc(SITE.footer.contactsTitle)}</h4>
-            </div>
+            <p class="vA-footClaim">${esc(SITE.footer.claim)}</p>
           </div>
         </div>
         <div class="bottom">
