@@ -3,6 +3,12 @@ window.TRUSTAI_HOME = {
   hero: {
     lead: "An academic research unit designing trustworthy Artificial Intelligence systems, bridging advanced research, education, and regional impact.",
   },
+  sectionMarkers: {
+    mission: "01",
+    research: "02",
+    education: "03",
+    collaborations: "04",
+  },
   mission: {
     kicker: "Mission",
     title: "A bridge between research, education, and regional impact",
@@ -19,6 +25,7 @@ window.TRUSTAI_HOME = {
     kicker: "Research Areas",
     title: "A competence system for trustworthy AI",
     subtitle: "An integrated map of scientific and engineering expertise to design, evaluate, and transfer trustworthy AI systems.",
+    focusSeparator: " · ",
     focusLabel: "research area",
   },
   areas: [

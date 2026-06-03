@@ -21,6 +21,10 @@
     return I ? I({ name, size }) : "";
   }
 
+  function marker(name){
+    return esc((T.sectionMarkers && T.sectionMarkers[name]) || "");
+  }
+
   function sectionHeader({ kicker, title, subtitle, delay = 120 }){
     return `
       <div class="vA-head">
@@ -67,7 +71,7 @@
   function sectionMission(){
     return `
       <section class="vA-step vA-mission">
-        <div class="vA-marker">01</div>
+        <div class="vA-marker">${marker("mission")}</div>
         <div class="vA-head">
           <div class="vA-kicker" data-reveal>${esc(T.mission.kicker)}</div>
           <h2 data-reveal="missionTitle" data-delay="80">${esc(T.mission.title)}</h2>
@@ -93,7 +97,7 @@
   function sectionResearch(){
     return `
       <section class="vA-step alt">
-        <div class="vA-marker">02</div>
+        <div class="vA-marker">${marker("research")}</div>
         ${sectionHeader({
           kicker: T.research.kicker,
           title: T.research.title,
@@ -129,7 +133,7 @@
   function sectionEducation(){
     return `
       <section class="vA-step">
-        <div class="vA-marker">03</div>
+        <div class="vA-marker">${marker("education")}</div>
         ${sectionHeader({
           kicker: T.education.kicker,
           title: T.education.title,
@@ -159,7 +163,7 @@
   function sectionCollaborations(){
     return `
       <section class="vA-step alt">
-        <div class="vA-marker">04</div>
+        <div class="vA-marker">${marker("collaborations")}</div>
         ${sectionHeader({
           kicker: T.collab.kicker,
           title: T.collab.title,
@@ -307,7 +311,7 @@
       active = index;
       const area = T.areas[active] || T.areas[0];
       items.forEach((item, itemIndex) => item.classList.toggle("on", itemIndex === active));
-      if (num) num.textContent = `${area.n} · ${T.research.focusLabel}`;
+      if (num) num.textContent = `${area.n}${T.research.focusSeparator}${T.research.focusLabel}`;
       if (title) title.textContent = area.t;
       if (desc) desc.textContent = area.d;
       if (focus) {

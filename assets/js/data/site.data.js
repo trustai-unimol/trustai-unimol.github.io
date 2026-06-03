@@ -28,6 +28,11 @@ window.TRUSTAI_SITE = {
   ui: {
     scrollCue: "SCROLL",
   },
+  redirect: {
+    pageTitle: "TrustAI - Home",
+    fallbackLabel: "Go to the TrustAI homepage",
+    href: "pages/home.html",
+  },
   footer: {
     navigateTitle: "Navigate",
     contactsTitle: "Contacts",

@@ -3,11 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrustAI — Home</title>
+  <title></title>
   <meta http-equiv="refresh" content="0; url=pages/home.html">
   <link rel="canonical" href="pages/home.html">
 </head>
 <body>
-  <p><a href="pages/home.html">Go to the TrustAI homepage</a></p>
+  <p><a id="homeRedirectLink" href="pages/home.html"></a></p>
+  <script src="assets/js/data/site.data.js"></script>
+  <script>
+    (function(){
+      const SITE = window.TRUSTAI_SITE;
+      const redirect = SITE.redirect;
+      document.title = redirect.pageTitle;
+      const link = document.getElementById("homeRedirectLink");
+      if (link) {
+        link.href = redirect.href;
+        link.textContent = redirect.fallbackLabel;
+      }
+    })();
+  </script>
 </body>
 </html>
