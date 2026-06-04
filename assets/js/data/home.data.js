@@ -22,7 +22,7 @@ window.TRUSTAI_HOME = {
     ],
   },
   research: {
-    kicker: "Research",
+    kicker: "Advanced Research",
     title: "Research Themes in Trustworthy Artificial Intelligence",
     subtitle: "Our research integrates Artificial Intelligence, Software Engineering, Security, and Human-Centered Computing to design, evaluate, and deploy trustworthy intelligent systems.",
     focusSeparator: " · ",
@@ -52,7 +52,7 @@ window.TRUSTAI_HOME = {
   ],
   // Education & Outreach
   education: {
-    kicker: "Education",
+    kicker: "Education and Training",
     title: "Education, Training, and Public Engagement",
     intro: "TrustAI contributes to education, professional training, and public engagement initiatives aimed at promoting a deeper understanding of Artificial Intelligence and its implications for society.",
     goal: "The objective is to develop advanced competencies, foster interdisciplinary skills, and encourage informed discussions on the opportunities and challenges of Artificial Intelligence.",
@@ -66,7 +66,7 @@ window.TRUSTAI_HOME = {
   },
   // Projects & Collaborations
   collab: {
-    kicker: "Impact",
+    kicker: "Knowledge Transfer",
     title: "Research Networks and Collaborations",
     intro: "TrustAI fosters interdisciplinary collaborations with academic institutions, industry partners, public organizations, and international research networks to advance the scientific understanding and responsible adoption of Artificial Intelligence.",
     goal: "The unit contributes to collaborative research projects, scientific networks, and knowledge-transfer initiatives at regional, national, and international levels.",
