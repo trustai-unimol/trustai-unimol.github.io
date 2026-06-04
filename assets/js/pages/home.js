@@ -10,6 +10,7 @@
     6: [-90, -30, 30, 90, 150, 210],
     9: [-90, -50, -10, 30, 70, 110, 150, 190, 230]
   };
+  const researchOrbitAdvanceMs = 4800;
 
   function orbitAngle(index, total){
     const angles = orbitAngleSets[total];
@@ -345,7 +346,7 @@
 
     const timer = setInterval(() => {
       if (!isOrbitPaused) setActive((active + 1) % T.areas.length);
-    }, 3600);
+    }, researchOrbitAdvanceMs);
     setActive(0);
 
     return () => clearInterval(timer);
