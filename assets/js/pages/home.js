@@ -5,7 +5,16 @@
   const I = window.Icon;
   const PILLAR_ICONS = window.PILLAR_ICONS || [];
 
-  const orbitAngles = [-90, -50, -10, 30, 70, 110, 150, 190, 230];
+  const orbitAngleSets = {
+    4: [-135, -45, 45, 135],
+    9: [-90, -50, -10, 30, 70, 110, 150, 190, 230]
+  };
+
+  function orbitAngle(index, total){
+    const angles = orbitAngleSets[total];
+    if (angles) return angles[index];
+    return -90 + (index * (360 / Math.max(total, 1)));
+  }
 
   function esc(value){
     return String(value ?? "").replace(/[&<>"']/g, (char) => ({
@@ -119,7 +128,7 @@
               </div>
             </div>
             ${T.areas.map((area, index) => `
-              <button class="vA-orbitItem" data-index="${index}" style="--a:${orbitAngles[index]}deg" aria-label="${esc(`${area.n}. ${area.t}`)}">
+              <button class="vA-orbitItem" data-index="${index}" style="--a:${orbitAngle(index, T.areas.length)}deg" aria-label="${esc(`${area.n}. ${area.t}`)}">
                 <span class="orbitIndex">${esc(area.n)}</span>
                 <span class="orbitTitle">${esc(area.t)}</span>
               </button>
