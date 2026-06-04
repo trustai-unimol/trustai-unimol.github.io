@@ -1,7 +1,7 @@
 // Page content for the TrustAI homepage (English)
 window.TRUSTAI_HOME = {
   hero: {
-      lead: "A research unit of the University of Molise advancing the empirical study and engineering of trustworthy intelligent systems at the intersection of Artificial Intelligence, Software Engineering, Security, and Human-Centered Computing.",,
+      lead: "A research unit of the University of Molise dedicated to the design, development, and evaluation of trustworthy intelligent systems at the intersection of Artificial Intelligence, Software Engineering, Security, and Human-Centered Computing.",
   },
   sectionMarkers: {
     mission: "01",
