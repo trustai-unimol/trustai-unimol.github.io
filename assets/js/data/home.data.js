@@ -1,7 +1,7 @@
 // Page content for the TrustAI homepage (English)
 window.TRUSTAI_HOME = {
   hero: {
-      lead: "A research unit of the University of Molise dedicated to the design, development, and evaluation of trustworthy intelligent systems at the intersection of Artificial Intelligence, Software Engineering, Security, and Human-Centered Computing.",
+      lead: "A research unit of the University of Molise dedicated to the study, development, and responsible adoption of intelligent systems, building on longstanding expertise in Software Analytics, Artificial Intelligence, and Trustworthy AI.",
   },
   sectionMarkers: {
     mission: "01",
@@ -12,50 +12,62 @@ window.TRUSTAI_HOME = {
   mission: {
     kicker: "Mission",
     title: "Advancing Trustworthy Artificial Intelligence through Research and Education",
-      leadPrefix: "We investigate the scientific and engineering foundations of ",
-      leadHighlight: "trustworthy intelligent systems",
-      leadSuffix: ", combining advances in Artificial Intelligence, Software Engineering, Security, and Human-Centered Computing to develop technologies that are reliable, transparent, secure, and beneficial for society.",
+      leadPrefix: "Building on a long tradition of research in ",
+      leadHighlight: "Software Analytics and Empirical Software Engineering",
+      leadSuffix: ", TrustAI investigates the foundations, development, and evaluation of intelligent systems, with a particular focus on Artificial Intelligence and Trustworthy AI.",
     pillars: [
-      { k: "01", t: "Advanced Research", d: "We conduct fundamental and applied research on intelligent systems through rigorous scientific methods, empirical studies, and experimental validation." },
-      { k: "02", t: "Education and Training", d: "We contribute to higher education, doctoral training, and lifelong learning initiatives in Artificial Intelligence, Software Engineering, and Data-Driven Systems." },
-      { k: "03", t: "Knowledge Transfer", d: "We foster collaborations with industry, public institutions, and research organizations to translate scientific advances into real-world impact." },,
+        {
+          k: "01",
+          t: "Advanced Research",
+          d: "We conduct fundamental and applied research on intelligent systems through rigorous scientific methods, empirical studies, and experimental validation."
+        },
+        {
+          k: "02",
+          t: "Education and Training",
+          d: "We contribute to higher education, doctoral training, and lifelong learning initiatives in Artificial Intelligence, Software Analytics, and Software Engineering."
+        },
+        {
+          k: "03",
+          t: "Knowledge Transfer",
+          d: "We foster collaborations with industry, public institutions, and research organizations to translate scientific advances into real-world impact."
+        },
     ],
   },
   research: {
-    kicker: "Advanced Research",
+    kicker: "Research Areas",
     title: "Research Themes in Trustworthy Artificial Intelligence",
-    subtitle: "Our research integrates Artificial Intelligence, Software Engineering, Security, and Human-Centered Computing to design, evaluate, and deploy trustworthy intelligent systems.",
+    subtitle: "Our research spans the entire lifecycle of intelligent systems, from understanding software and developer behaviour through data, to designing AI-driven solutions and studying their trustworthiness in real-world settings.",
     focusSeparator: " · ",
     focusLabel: "research area",
   },
   areas: [
       {
         n: "01",
-        t: "Trustworthy AI and AI Engineering",
-        d: "Methods, tools, and empirical approaches for developing reliable, robust, explainable, accountable, and trustworthy AI systems."
+        t: "Trustworthy AI",
+        d: "Methods, tools, and empirical approaches for developing AI systems that are reliable, transparent, explainable, secure, accountable, and aligned with human values."
       },
       {
         n: "02",
-        t: "Software Engineering and Software Analytics",
-        d: "Data-driven methods for understanding, improving, and supporting software development processes, products, and developer activities."
+        t: "Software Analytics",
+        d: "Data-driven approaches for understanding software systems, development processes, and developer behaviour through empirical studies, software intelligence, and mining software repositories."
       },
       {
         n: "03",
-        t: "AI Security, Privacy, and Blockchain Systems",
-        d: "Research on cybersecurity, privacy, smart contracts, adversarial machine learning, and secure intelligent systems."
+        t: "Intelligent Software Engineering",
+        d: "AI-driven methods and tools for supporting software development, including code generation, recommendation systems, program comprehension, and developer assistance."
       },
       {
         n: "04",
-        t: "AI for Health and Human-Centered Systems",
-        d: "AI-driven solutions for healthcare, rehabilitation, active aging, clinical decision support, and human-centered technologies."
+        t: "Intelligent Systems for Society",
+        d: "Design and application of intelligent systems in real-world domains, including healthcare, rehabilitation, public services, active ageing, and human-centered technologies."
       },
   ],
   // Education & Outreach
   education: {
     kicker: "Education and Training",
     title: "Education, Training, and Public Engagement",
-    intro: "TrustAI contributes to education, professional training, and public engagement initiatives aimed at promoting a deeper understanding of Artificial Intelligence and its implications for society.",
-    goal: "The objective is to develop advanced competencies, foster interdisciplinary skills, and encourage informed discussions on the opportunities and challenges of Artificial Intelligence.",
+    intro: "TrustAI contributes to education, professional training, and public engagement initiatives aimed at promoting a deeper understanding of AI-based intelligent systems and their implications for society.",
+    goal: "The objective is to develop advanced competencies, foster interdisciplinary skills, and encourage informed discussions on the opportunities and challenges of intelligent systems and Artificial Intelligence.",
     items: [
       { t: "Seminars, workshops, and thematic schools", d: "Scientific exchange opportunities open to the research community.", icon: "users" },
       { t: "Advanced training for students and PhD candidates", d: "Undergraduate, graduate, and doctoral training opportunities in Artificial Intelligence, Software Engineering, and Data-Driven Systems.", icon: "cap" },,
@@ -68,7 +80,7 @@ window.TRUSTAI_HOME = {
   collab: {
     kicker: "Knowledge Transfer",
     title: "Research Networks and Collaborations",
-    intro: "TrustAI fosters interdisciplinary collaborations with academic institutions, industry partners, public organizations, and international research networks to advance the scientific understanding and responsible adoption of Artificial Intelligence.",
+    intro: "TrustAI fosters collaborations with academic institutions, industry partners, public organizations, and international research networks to advance research in Software Analytics, Artificial Intelligence, and Trustworthy AI.",
     goal: "The unit contributes to collaborative research projects, scientific networks, and knowledge-transfer initiatives at regional, national, and international levels.",
     actors: [
       { t: "Universities", d: "Joint research and scientific networks.", icon: "cap" },
@@ -86,6 +98,6 @@ window.TRUSTAI_HOME = {
   bridge: [
       { t: "Research", d: "Scientific excellence and innovation" },
       { t: "Education", d: "Knowledge, skills, and training" },
-      { t: "Impact", d: "Responsible AI for society" },
+      { t: "Society", d: "Responsible intelligent systems" },
   ],
 };
