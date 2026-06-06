@@ -7,3 +7,4 @@ superpowers/
 # Project-local files not meant for git
 docs/
 tests/
+.vscode/
