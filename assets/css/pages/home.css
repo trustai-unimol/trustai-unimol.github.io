@@ -100,7 +100,7 @@
         .vA-missionTriad{ position:relative; min-height:390px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:stretch; gap:52px; padding:54px 26px 18px; }
         .vA-missionTriad::before{ content:""; position:absolute; left:12%; right:12%; top:122px; height:2px; background:linear-gradient(90deg,rgba(34,182,200,0),rgba(34,182,200,.58),rgba(45,125,190,.45),rgba(34,182,200,0)); transform:scaleX(0); transform-origin:left; opacity:.9; }
         .vA-missionTriad.is-in::before{ animation:vA-lineGrow 1.2s cubic-bezier(.2,.7,.2,1) .18s both; }
-        .vA-triadNode{ position:relative; z-index:3; text-align:center; transform:translateY(28px); transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); padding:10px 10px 0; border-radius:18px; }
+        .vA-triadNode{ position:relative; z-index:3; text-align:center; transform:translateY(28px); transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); padding:30px 24px 18px; border-radius:18px; }
         .vA-triadNode.is-in{ transform:none; }
         .vA-triadNode:hover{ transform:translateY(-8px) scale(1.035); background:rgba(255,255,255,.68); box-shadow:0 24px 54px rgba(14,42,71,.08); }
         .vA-nodeOrb{ position:relative; z-index:3; width:116px; height:116px; margin:0 auto 26px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.34),transparent 31%),linear-gradient(100deg,var(--blue),var(--cyan2),var(--blue)); background-size:200% auto; animation:vA-shimmer 4.5s linear infinite; box-shadow:0 22px 42px rgba(14,42,71,.16),0 0 0 12px rgba(52,211,224,.08); transition:transform .28s ease, box-shadow .28s ease; }
@@ -111,7 +111,7 @@
         .vA-triadNode:hover .vA-nodeOrb svg path{ animation:vA-iconDraw .95s cubic-bezier(.2,.7,.2,1) both; }
         .vA-triadNode h3{ font-size:22px; color:var(--navy); margin:0 0 10px; letter-spacing:-.3px; }
         .vA-triadNode:hover h3{ color:var(--blue); }
-        .vA-triadDesc{ font-size:15px; line-height:1.6; color:var(--slate); margin:0 auto; max-width:280px; transition:color .25s ease; }
+        .vA-triadDesc{ font-size:15px; line-height:1.6; color:var(--slate); margin:0 auto; max-width:310px; transition:color .25s ease; }
         .vA-triadNode:hover .vA-triadDesc{ color:var(--navy2); }
         .vA-pulseTrack{ position:absolute; top:117px; height:10px; z-index:1; pointer-events:none; overflow:hidden; }
         .vA-pulseTrack.t1{ left:calc(16.666% - 5px); right:calc(50% - 5px); }
@@ -246,7 +246,7 @@
           .vA-mlead{ font-size:17px; line-height:1.5; margin-bottom:0; }
           .vA-missionTriad{ gap:14px; padding:10px 0 0; }
           .vA-missionTriad::before{ left:50%; top:26px; bottom:26px; z-index:0; }
-          .vA-triadNode{ position:relative; z-index:2; display:grid; grid-template-columns:64px 1fr; gap:16px; align-items:center; max-width:none; width:100%; min-height:116px; text-align:left; padding:18px 16px; border:1px solid rgba(211,226,238,.92); border-radius:18px; background:#fff; box-shadow:0 14px 36px rgba(14,42,71,.06); }
+          .vA-triadNode{ position:relative; z-index:2; display:grid; grid-template-columns:64px 1fr; gap:16px; align-items:center; max-width:none; width:100%; min-height:152px; text-align:left; padding:34px 22px 28px; border:1px solid rgba(211,226,238,.92); border-radius:18px; background:#fff; box-shadow:0 14px 36px rgba(14,42,71,.06); }
           .vA-triadNode{ display:flex; }
           .vA-triadNode{ flex-direction:column; text-align:center; }
           .vA-triadNode:hover{ transform:none; background:#fff; box-shadow:0 16px 38px rgba(14,42,71,.08); }
