@@ -48,13 +48,15 @@
   }
 
   function nav(){
+    const home = SITE.nav.items.find((item) => item.id === "home");
+    const homeHref = home ? home.href : "#";
     return `
       <nav class="vA-nav">
-        <a class="vA-navLogoLink" href="#" aria-label="${esc(SITE.brand.name)}">
+        <a class="vA-navLogoLink" href="${esc(homeHref)}" aria-label="${esc(SITE.brand.name)}">
           <img class="vA-navLogo" src="${esc(SITE.assets.logoFull)}" alt="${esc(SITE.brand.name)}">
         </a>
         <div class="vA-links">
-          ${SITE.nav.items.filter((item) => item.visible).map((item) => `<a href="${esc(item.href)}">${esc(item.label)}</a>`).join("")}
+          ${SITE.nav.items.filter((item) => item.visible).map((item) => `<a href="${esc(item.href)}" class="${item.id === "home" ? "is-active" : ""}"${item.id === "home" ? ' aria-current="page"' : ""}>${esc(item.label)}</a>`).join("")}
         </div>
       </nav>
     `;

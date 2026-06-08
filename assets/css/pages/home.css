@@ -16,12 +16,11 @@
         @keyframes vA-iconDraw{ 0%{ stroke-dashoffset:42; opacity:.18; } 58%{ stroke-dashoffset:0; opacity:1; } 100%{ stroke-dashoffset:0; opacity:1; } }
         /* nav */
         .vA-nav{ display:flex; align-items:center; gap:20px; padding:18px clamp(20px,4vw,56px); border-bottom:1px solid rgba(227,235,242,.78); position:fixed; left:0; right:0; top:0; background:rgba(255,255,255,.78); backdrop-filter:blur(10px); z-index:20; }
-        .vA-navLogoLink{ display:flex; align-items:center; flex:none; width:242px; height:54px; overflow:hidden; text-decoration:none; }
-        .vA-navLogo{ display:block; width:100%; height:100%; object-fit:contain; object-position:left center; transform:scale(1.38); transform-origin:left center; }
+        .vA-navLogoLink{ display:flex; align-items:center; flex:none; width:278px; height:54px; overflow:hidden; text-decoration:none; }
+        .vA-navLogo{ display:block; width:100%; height:100%; object-fit:contain; object-position:left center; transform:scale(1.68); transform-origin:left center; }
         .vA-links{ display:flex; gap:clamp(10px,1.3vw,18px); margin-left:auto; align-items:center; min-width:0; overflow:hidden; }
         .vA-links a{ font-size:13px; font-weight:600; color:var(--slate); text-decoration:none; white-space:nowrap; transition:color .18s; }
-        .vA-links a:hover{ color:var(--navy); }
-        .vA-links a:first-child{ color:var(--navy); }
+        .vA-links a:hover,.vA-links a.is-active{ color:var(--navy); }
         /* ===== filo conduttore ===== */
         .vA-flow{ position:relative; }
         .vA-rail{ position:absolute; left:54px; top:40px; bottom:40px; width:2px; background:var(--line); z-index:1; }
@@ -189,7 +188,9 @@
         .vA-footClaim{ margin:10px 0 0; max-width:330px; color:#fff; font-family:'IBM Plex Mono',monospace; font-size:10px; line-height:1.55; letter-spacing:.11em; text-transform:uppercase; opacity:.82; }
         .vA-foot .bottom{ display:flex; justify-content:space-between; padding-top:20px; font-size:13px; color:#6E89A1; flex-wrap:wrap; gap:8px; }
         @media (max-width: 980px){
-          .vA-links{ display:none; }
+          .vA-nav{ gap:16px; }
+          .vA-links{ display:flex; flex:1; justify-content:flex-end; overflow-x:auto; scrollbar-width:none; }
+          .vA-links::-webkit-scrollbar{ display:none; }
           .vA-rail,.vA-marker{ display:none; }
           .vA-hero{ padding:92px 18px 82px; }
           .vA-heroBrand{ width:min(760px,96vw); }
@@ -220,8 +221,11 @@
           .vA-mlead{ font-size:20px; }
         }
         @media (max-width: 560px){
-          .vA-nav{ padding:14px 18px; }
-          .vA-navLogoLink{ width:146px; height:34px; }
+          .vA-nav{ padding:12px 12px; gap:10px; }
+          .vA-navLogoLink{ width:96px; height:29px; }
+          .vA-navLogo{ transform:scale(1.5); }
+          .vA-links{ gap:7px; overflow:visible; }
+          .vA-links a{ font-size:11px; }
           .vA-hero{ min-height:100svh; padding:84px 14px 76px; align-items:center; }
           .vA-neural{ opacity:.36; }
           .vA-hero::before{ background-size:34px 34px; }
@@ -292,7 +296,8 @@
           .vA-footClaim{ max-width:280px; font-size:9.5px; letter-spacing:.09em; }
         }
         @media (max-width: 390px){
-          .vA-navLogoLink{ width:124px; height:29px; }
+          .vA-navLogoLink{ width:92px; height:27px; }
+          .vA-links{ gap:6px; }
           .vA-hero{ padding-left:16px; padding-right:16px; }
           .vA-cutLogo{ width:106px; }
           .vA-heroTitle{ font-size:clamp(56px,18vw,76px); }

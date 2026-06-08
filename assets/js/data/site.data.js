@@ -14,14 +14,14 @@ window.TRUSTAI_SITE = {
   },
   nav: {
     items: [
-      { label: "Home", href: "#", visible: true },
+      { id: "home", label: "Home", href: "home.html", visible: true },
+      { id: "people", label: "People", href: "people.html", visible: false },
+      { id: "publications", label: "Publications", href: "publications.html", visible: false },
       { label: "Mission", href: "#mission", visible: false },
       { label: "Research Areas", href: "#research", visible: false },
       { label: "Projects", href: "#projects", visible: false },
-      { label: "People", href: "#people", visible: false },
       { label: "Education and Outreach", href: "#education", visible: false },
       { label: "Collaborations", href: "#collaborations", visible: false },
-      { label: "Publications", href: "#publications", visible: false },
       { label: "Contacts", href: "#contacts", visible: false },
     ],
   },
