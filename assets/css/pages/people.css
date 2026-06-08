@@ -1,0 +1,123 @@
+/* TrustAI — People page. Builds on the .vA design tokens from home.css. */
+
+.vA.ppl{ background:var(--bg); }
+.ppl *{ box-sizing:border-box; }
+
+/* ============ hero ============ */
+.ppl-hero{ position:relative; padding:128px clamp(22px,5vw,76px) 46px; overflow:hidden; isolation:isolate; border-bottom:1px solid var(--line); background:linear-gradient(180deg,#fff 0%,var(--bg2) 100%); }
+.ppl-hero::before{ content:""; position:absolute; inset:0; pointer-events:none; z-index:0;
+  background-image:linear-gradient(rgba(14,42,71,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(14,42,71,.05) 1px,transparent 1px); background-size:46px 46px;
+  -webkit-mask:radial-gradient(120% 130% at 82% -10%, #000 8%, transparent 56%); mask:radial-gradient(120% 130% at 82% -10%, #000 8%, transparent 56%); }
+.ppl-hero::after{ content:""; position:absolute; top:-40%; right:-12%; width:min(620px,60vw); height:min(620px,60vw); border-radius:50%; pointer-events:none; z-index:0;
+  background:radial-gradient(circle, rgba(52,211,224,.16), transparent 64%); }
+.ppl-neural{ position:absolute; inset:0; width:100%; height:100%; opacity:.5; pointer-events:none; z-index:0; mix-blend-mode:multiply; }
+.ppl-heroInner{ position:relative; z-index:2; max-width:1200px; margin:0 auto; }
+.ppl-kicker{ font-size:12.5px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--cyan); display:flex; align-items:center; gap:11px; }
+.ppl-kicker::before{ content:""; width:26px; height:2px; border-radius:2px; background:linear-gradient(90deg,var(--cyan),rgba(45,125,190,.2)); }
+.ppl-heroTitle{ font-family:'Sora',sans-serif; font-size:clamp(38px,6vw,72px); line-height:1; letter-spacing:-.03em; color:var(--navy); font-weight:800; margin:16px 0 0; max-width:14ch; text-wrap:balance; }
+.ppl-heroSub{ max-width:660px; margin:20px 0 0; font-size:clamp(15px,1.5vw,18px); line-height:1.62; color:var(--slate); }
+.ppl-stats{ display:flex; flex-wrap:wrap; gap:clamp(20px,4vw,56px); margin-top:36px; }
+.ppl-stat{ position:relative; }
+.ppl-stat .num{ font-family:'Sora',sans-serif; font-size:clamp(28px,3.4vw,42px); font-weight:800; line-height:1; letter-spacing:-.02em; color:var(--navy); }
+.ppl-stat .lbl{ margin-top:9px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--slate); }
+.ppl-stat + .ppl-stat::before{ content:""; position:absolute; left:clamp(-28px,-2vw,-10px); top:4px; bottom:4px; width:1px; background:var(--line); }
+
+.ppl-secLabel{ max-width:1200px; margin:0 auto; padding:0 clamp(22px,5vw,76px); font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--cyan); display:flex; align-items:center; gap:11px; }
+.ppl-secLabel::before{ content:""; width:24px; height:2px; border-radius:2px; background:linear-gradient(90deg,var(--cyan),rgba(45,125,190,.2)); }
+
+/* ============ shared portrait placeholder ============ */
+.ppl-portrait{ position:relative; border-radius:18px; overflow:hidden; flex:none;
+  background:
+    repeating-linear-gradient(135deg, rgba(45,125,190,.06) 0 2px, transparent 2px 11px),
+    linear-gradient(160deg, var(--bg2), #eef5fa);
+  border:1px solid var(--line); display:flex; align-items:center; justify-content:center; }
+.ppl-photo{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; z-index:1; }
+.ppl-portrait .mono{ font-family:'Sora',sans-serif; font-weight:800; letter-spacing:-.03em; line-height:1;
+  background:linear-gradient(135deg,var(--blue),var(--cyan2)); -webkit-background-clip:text; background-clip:text; color:transparent;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1); }
+.ppl-portrait .cap{ position:absolute; bottom:11px; left:0; right:0; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--slate); opacity:.8; }
+.ppl-portrait::after{ content:""; position:absolute; inset:0; background:radial-gradient(120% 90% at 50% -10%, rgba(255,255,255,.5), transparent 52%); pointer-events:none; }
+
+/* ============ lead (PI) ============ */
+.ppl-leadWrap{ max-width:1200px; margin:14px auto 0; padding:18px clamp(22px,5vw,76px) 0; }
+.ppl-lead{ position:relative; display:grid; grid-template-columns:300px 1fr; gap:clamp(28px,4vw,56px); align-items:center; margin-top:clamp(16px,2vw,22px); padding:clamp(26px,3vw,40px); border:1px solid var(--line); border-radius:24px; background:linear-gradient(180deg,#fff,var(--bg2)); overflow:hidden; }
+.ppl-lead::before{ content:""; position:absolute; right:-120px; top:50%; width:520px; height:520px; transform:translateY(-50%); border-radius:50%; border:1px solid rgba(45,125,190,.12); pointer-events:none; }
+.ppl-lead::after{ content:""; position:absolute; right:-40px; top:50%; width:340px; height:340px; transform:translateY(-50%); border-radius:50%; border:1px dashed rgba(34,182,200,.22); pointer-events:none; }
+.ppl-leadPortrait{ position:relative; z-index:2; width:300px; aspect-ratio:4/5; }
+.ppl-leadPortrait .ppl-portrait{ width:100%; height:100%; }
+.ppl-leadPortrait::before{ content:""; position:absolute; inset:-14px; border-radius:50%; background:radial-gradient(circle at 50% 40%, rgba(52,211,224,.18), transparent 64%); z-index:-1; }
+.ppl-leadPortrait .mono{ font-size:128px; }
+.ppl-leadBody{ position:relative; z-index:2; min-width:0; }
+.ppl-roleBadge{ display:inline-flex; align-items:center; gap:8px; white-space:nowrap; font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:#fff; padding:7px 14px; border-radius:100px; background:linear-gradient(135deg,var(--navy),var(--blue)); box-shadow:0 10px 24px rgba(14,42,71,.18); }
+.ppl-roleBadge .d{ width:6px; height:6px; border-radius:50%; background:var(--cyan2); box-shadow:0 0 8px rgba(52,211,224,.7); }
+.ppl-name{ font-family:'Sora',sans-serif; font-size:clamp(28px,3.4vw,42px); font-weight:800; letter-spacing:-.025em; color:var(--navy); line-height:1.04; margin:16px 0 0; }
+.ppl-name.ph{ position:relative; }
+.ppl-name.ph::after{ content:""; position:absolute; left:0; right:0; bottom:-4px; height:2px; background:repeating-linear-gradient(90deg,rgba(45,125,190,.4) 0 7px, transparent 7px 13px); opacity:.5; }
+.ppl-affil{ margin:12px 0 0; font-size:15px; color:var(--slate); }
+.ppl-leadBio{ margin:18px 0 0; font-size:15.5px; line-height:1.62; color:var(--navy2); max-width:620px; }
+
+.ppl-focusRow{ margin:22px 0 0; }
+.ppl-focusLbl{ font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--slate); margin-bottom:9px; }
+.ppl-themes{ display:flex; flex-wrap:wrap; gap:8px; }
+.ppl-kwRow{ display:flex; flex-wrap:wrap; gap:8px; }
+.ppl-kw{ display:inline-flex; align-items:center; gap:7px; padding:6px 13px; border:1px solid var(--line); border-radius:100px; background:#fff; font-size:12.5px; font-weight:600; color:var(--navy2); transition:border-color .2s, color .2s, transform .2s; }
+.ppl-kw::before{ content:""; width:5px; height:5px; border-radius:50%; background:linear-gradient(135deg,var(--blue),var(--cyan2)); flex:none; }
+.ppl-themeTag{ display:inline-flex; align-items:center; gap:7px; padding:6px 12px 6px 8px; border:1px solid var(--line); border-radius:100px; background:#fff; font-size:12.5px; font-weight:600; color:var(--navy2); transition:.2s; }
+.ppl-themeTag .tn{ font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:700; color:#fff; background:linear-gradient(135deg,var(--blue),var(--cyan2)); width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+
+/* links */
+.ppl-links{ display:flex; flex-wrap:wrap; gap:9px; margin-top:24px; }
+.ppl-link{ display:inline-flex; align-items:center; justify-content:center; gap:8px; height:40px; padding:0 16px 0 13px; border:1px solid var(--line); border-radius:100px; background:#fff; color:var(--navy2); font-size:12.5px; font-weight:600; text-decoration:none; transition:.2s; }
+.ppl-link svg{ width:17px; height:17px; color:var(--blue); transition:color .2s; }
+.ppl-link:hover{ border-color:transparent; color:#fff; background:linear-gradient(135deg,var(--navy),var(--blue)); transform:translateY(-2px); box-shadow:0 12px 26px rgba(14,42,71,.18); }
+.ppl-link:hover svg{ color:#fff; }
+
+/* ============ team grid ============ */
+.ppl-gridWrap{ max-width:1200px; margin:14px auto 0; padding:18px clamp(22px,5vw,76px) 66px; }
+.ppl-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:22px; }
+.ppl-empty{ margin-top:22px; padding:22px; border:1px dashed var(--line); border-radius:16px; background:var(--bg2); color:var(--slate); font-size:14px; line-height:1.5; }
+.ppl-card{ position:relative; display:flex; flex-direction:column; padding:20px; border:1px solid var(--line); border-radius:18px; background:#fff; overflow:hidden; transition:transform .24s, box-shadow .24s, border-color .24s; }
+.ppl-card::after{ content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(180deg,var(--cyan),rgba(45,125,190,.22)); transform:scaleY(0); transform-origin:top; transition:transform .26s ease; }
+.ppl-card:hover{ transform:translateY(-5px); border-color:rgba(34,182,200,.5); box-shadow:0 26px 52px rgba(14,42,71,.11); }
+.ppl-card:hover::after{ transform:scaleY(1); }
+.ppl-cardTop{ display:flex; gap:16px; align-items:center; }
+.ppl-cardPortrait{ width:84px; height:96px; border-radius:14px; }
+.ppl-cardPortrait .mono{ font-size:40px; }
+.ppl-cardPortrait .cap{ display:none; }
+.ppl-card:hover .ppl-cardPortrait .mono{ transform:scale(1.08); }
+.ppl-cardId{ min-width:0; }
+.ppl-cardRole{ font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); }
+.ppl-cardName{ font-family:'Sora',sans-serif; font-size:19px; font-weight:700; letter-spacing:-.02em; color:var(--navy); line-height:1.12; margin:7px 0 0; }
+.ppl-cardName.ph{ position:relative; display:inline-block; }
+.ppl-cardName.ph::after{ content:""; position:absolute; left:0; right:0; bottom:-3px; height:2px; background:repeating-linear-gradient(90deg,rgba(45,125,190,.35) 0 6px, transparent 6px 11px); opacity:.55; }
+.ppl-cardAffil{ font-size:12.5px; color:var(--slate); margin:6px 0 0; }
+.ppl-cardMeta{ margin:16px 0 0; padding-top:15px; border-top:1px solid var(--line); }
+.ppl-cardMeta .ppl-kw{ font-size:11.5px; padding:5px 11px; background:var(--bg2); }
+.ppl-card:hover .ppl-cardMeta .ppl-kw{ border-color:rgba(34,182,200,.4); }
+.ppl-cardThemes{ display:flex; flex-wrap:wrap; gap:7px; margin-top:14px; }
+.ppl-chip{ display:inline-flex; align-items:center; gap:6px; padding:4px 10px 4px 6px; border:1px solid var(--line); border-radius:100px; background:var(--bg2); font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; color:var(--navy2); }
+.ppl-chip .cn{ color:var(--blue); font-weight:700; }
+.ppl-cardLinks{ display:flex; gap:8px; margin-top:18px; padding-top:16px; border-top:1px solid var(--line); }
+.ppl-iconBtn{ width:36px; height:36px; border-radius:50%; border:1px solid var(--line); background:#fff; display:flex; align-items:center; justify-content:center; color:var(--blue); text-decoration:none; transition:.2s; }
+.ppl-iconBtn svg{ width:17px; height:17px; }
+.ppl-iconBtn:hover{ border-color:transparent; color:#fff; background:linear-gradient(135deg,var(--navy),var(--blue)); transform:translateY(-2px); box-shadow:0 10px 22px rgba(14,42,71,.18); }
+
+/* ============ responsive ============ */
+@media (max-width: 940px){
+  .ppl-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .ppl-lead{ grid-template-columns:1fr; gap:26px; text-align:left; }
+  .ppl-leadPortrait{ width:220px; }
+  .ppl-leadPortrait .mono{ font-size:96px; }
+  .ppl-lead::before,.ppl-lead::after{ display:none; }
+}
+@media (max-width: 600px){
+  .ppl-hero{ padding:108px 18px 38px; }
+  .ppl-stats{ gap:22px; }
+  .ppl-stat + .ppl-stat::before{ left:-12px; }
+  .ppl-grid{ grid-template-columns:1fr; }
+  .ppl-leadWrap,.ppl-gridWrap{ padding-left:18px; padding-right:18px; }
+  .ppl-secLabel{ padding-left:18px; padding-right:18px; }
+  .ppl-lead{ padding:22px; }
+  .ppl-leadPortrait{ margin:0 auto; }
+  .ppl-roleBadge{ display:flex; width:max-content; max-width:100%; margin:0 auto; justify-content:center; white-space:normal; text-align:center; }
+}
